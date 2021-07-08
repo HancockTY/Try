@@ -31,20 +31,20 @@ pipeline {
    //   }
    // }
     
-  //  stage ('SAST') {
-  //    steps {
-   //     withSonarQubeEnv('sonar') {
-   //       sh 'mvn sonar:sonar'
-  //        sh 'cat target/sonar/report-task.txt'
- //       }
-  //    }
- //   }
-    
-    stage ('Build') {
+   stage ('SAST') {
       steps {
-      sh 'mvn clean package'
-       }
+       withSonarQubeEnv('sonar') {
+         sh 'mvn sonar:sonar'
+        sh 'cat target/sonar/report-task.txt'
+        }
+     }
     }
+    
+    //stage ('Build') {
+      //steps {
+      //sh 'mvn clean package'
+       //}
+   // }
     
    // stage ('Deploy-To-Tomcat') {
    //         steps {
