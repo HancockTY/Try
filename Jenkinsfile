@@ -39,12 +39,12 @@ pipeline {
    }
    } */
     
-   stage ('Build') {
+ /*  stage ('Build') {
       steps {
   //   sh 'mvn clean package'
        //  echo 'Build'//
        }
-    }         
+    }         */
     
 /*   stage ('Deploy-To-Tomcat') {
            steps {
