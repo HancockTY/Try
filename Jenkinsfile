@@ -20,7 +20,7 @@ pipeline {
     }
   } 
     
-/*    stage ('Source Composition Analysis') {
+   stage ('Source Composition Analysis') {
     steps {
       sh 'wget "https://raw.githubusercontent.com/cehkunal/webapp/master/owasp-dependency-check.sh" '
        sh 'chmod +x owasp-dependency-check.sh'
@@ -37,7 +37,7 @@ pipeline {
      sh 'cat target/sonar/report-task.txt'
       }
    }
-   } */
+   } 
     
  /*  stage ('Build') {
       steps {
