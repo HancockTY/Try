@@ -46,20 +46,21 @@ pipeline {
        }
     }         */
     
-/*   stage ('Deploy-To-Tomcat') {
+   stage ('Deploy-To-Tomcat') {
            steps {
           echo 'deploy'
           }       
-   }             */
+   }             
     
     
- /*   stage ('DAST') {
+    stage ('DAST') {
       steps {
        sshagent(['zap']) {
-         sh 'ssh -o  StrictHostKeyChecking=no ubuntu@13.232.158.44 "docker run -t owasp/zap2docker-stable zap-baseline.py -t http://13.232.202.25:8080/webapp/" || true'
-        }
+        // sh 'ssh -o  StrictHostKeyChecking=no ubuntu@13.232.158.44 "docker run -t owasp/zap2docker-stable zap-baseline.py -t http://13.232.202.25:8080/webapp/" || true'
+         sh 'docker run -t owasp/zap2docker-stable zap-baseline.py -t http://ec2-18-221-251-162.us-east-2.compute.amazonaws.com:8080//webapp/" || true'
+       }
       }
-    }  */
+    }  
 
     
   }
