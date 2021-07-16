@@ -49,8 +49,8 @@ pipeline {
   /* stage ('Deploy-To-Tomcat') {
            steps {
           echo 'deploy'
-          }       */
-   }             
+          }       
+   }             */
     
     
   /*  stage ('DAST') {
